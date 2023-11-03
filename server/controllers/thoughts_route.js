@@ -43,13 +43,13 @@ router.delete('/thoughts/:id', async (cro,sro)=>{
 })
 router.post('/thoughs/:id/reactions', async(cro,sro)=>{
     const reaction = {
-        // reactionId: new mongoose.Types.ObjectId(),
+        reactionId: new mongoose.Types.ObjectId(),
         reactionbody: cro.body.reactionbody,
         username: cro.body.username
     }
     const thougts = await Thought.findById(cro.params.id)
     thougts.reactions.push(reaction)
-    console.log(reaction)
+    // console.log(reaction)
     await thougts.save()
     sro.json(reaction)
 })
@@ -59,8 +59,14 @@ router.delete('/thoughs/:id/reactions/:reactionIds', async (cro,sro)=>{
  const thought = await Thought.findOne({_id: id})
 
   thought.reactions.pull({reactionId: reactionIds})
+  thought.reactions.forEach(function(reaction, x){
+    console.log(thought.reactions[x])
+    if(thought.reactions[x].reactionId.toString() === reactionIds){
+    const sliced = thought.reactions.splice(x,1)[0]
+    console.log('hi')}
+  })
 
- console.log(thought.reactions )
+ console.log(thought.reactions[0] )
  await thought.save()
 //  AndUpdate({
 //     _id: id},
