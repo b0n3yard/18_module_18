@@ -16,7 +16,11 @@ to install this project
 
 insomnia stuff
 
-https://github.com/b0n3yard/e-commerce_site_backend/assets/6476766/fa32cd7f-ca4a-4ec0-aa8f-df6b4be4470c
+
+
+
+https://github.com/b0n3yard/social_app_backend/assets/6476766/b63cbef4-57e3-4708-937b-2f3942b3e822
+
 
 
 <video width='320' height = '240' controls>
