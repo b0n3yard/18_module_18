@@ -1,10 +1,10 @@
 const {model, Schema} =  require('mongoose')
 
 const Reactions = new Schema({
-    reactionId:{
-        type: Schema.Types.ObjectId,
-        default: ()=> new mongoose.Types.ObjectId()
-    },
+    // reactionId:{
+    //     type: Schema.Types.ObjectId,
+    //     default: ()=> new Schema.Types.ObjectId()
+    // },
     reactionbody:{
         type:String,
         required:true,
@@ -18,7 +18,7 @@ const Reactions = new Schema({
         type:String,
         required: true
     },
-},{_id: false})
+})
 
 Reactions.virtual('CreatedAt').get(function(){
     return this.createdat.toLocaleString()

@@ -26,13 +26,13 @@ const Users = new Schema({
     },
     thoughts:[{
         type:Schema.Types.ObjectId,
-        ref: 'thoughts'
+        ref: 'Thought'
     }],
-    freinds:[{
+    friends:[{
         type: Schema.Types.ObjectId,
-        ref:'Users'
+        ref:'User'
     }]
 })
 
-const User = model('Users', Users)
+const User = model('User', Users)
 module.exports = User

@@ -17,8 +17,14 @@ const Thoughts = new Schema({
         required: true
     },
     reactions:[{
+        type: Schema.Types.Mixed,
         Reactions
-    }]
+        
+    }],
+    user:{
+        type:Schema.Types.ObjectId,
+        ref:'User'
+    }
 
 })
 Thoughts.virtual('reactioncount').get(function(){
