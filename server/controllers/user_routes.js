@@ -14,7 +14,11 @@ router.get('/users/:id', async (cro,sro)=>{
 
     const id = cro.params.id
     const auser = await User.findById(id).populate('thoughts').populate('friends')
-    sro.send(auser)
+    const modifieduser = auser.toObject({ getters: true })
+    modifieduser.friendcount = auser.friendcount
+    const {friends, ...rest } = modifieduser;
+    const reorderedUser = { ...rest, friends };
+    sro.send(reorderedUser)
 
 })
 router.put('/users/:id', async (cro,sro)=>{

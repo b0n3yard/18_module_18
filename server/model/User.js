@@ -33,6 +33,9 @@ const Users = new Schema({
         ref:'User'
     }]
 })
+Users.virtual('friendcount').get(function(){
+    return this.friends.length
+})
 
 const User = model('User', Users)
 module.exports = User
