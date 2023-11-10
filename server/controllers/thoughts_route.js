@@ -66,7 +66,7 @@ router.delete('/thoughts/:id', async (cro,sro)=>{
     sro.json(changed)
 
 })
-router.post('/thoughs/:id/reactions', async(cro,sro)=>{
+router.post('/thoughts/:id/reactions', async(cro,sro)=>{
     const reaction = {
         reactionId: new mongoose.Types.ObjectId(),
         reactionbody: cro.body.reactionbody,
@@ -78,7 +78,7 @@ router.post('/thoughs/:id/reactions', async(cro,sro)=>{
     await thougts.save()
     sro.json(reaction)
 })
-router.delete('/thoughs/:id/reactions/:reactionIds', async (cro,sro)=>{
+router.delete('/thoughts/:id/reactions/:reactionIds', async (cro,sro)=>{
  const{id,reactionIds} = cro.params
     console.log(reactionIds)
  const thought = await Thought.findOne({_id: id})

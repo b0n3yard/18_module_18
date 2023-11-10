@@ -24,7 +24,7 @@ https://github.com/b0n3yard/social_app_backend/assets/6476766/b63cbef4-57e3-4708
 
 
 <video width='320' height = '240' controls>
-        <source src = './social_app_backend.mp4' type = 'video/mp4'>
+        <source src = './social_media_backend.mp4' type = 'video/mp4'>
     </video>
     <br>
 
