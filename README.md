@@ -19,7 +19,11 @@ insomnia stuff
 
 
 
-https://github.com/b0n3yard/social_app_backend/assets/6476766/b63cbef4-57e3-4708-937b-2f3942b3e822
+
+https://github.com/b0n3yard/social_app_backend/assets/6476766/0272eb7c-eb19-4087-b5fd-1bf8c54f550f
+
+
+
 
 
 
